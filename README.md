@@ -1,6 +1,6 @@
 # balancedbites
 
-A new Flutter application.
+An image recognition based Flutter App.
 
 ## Getting Started
 
