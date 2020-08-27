@@ -1,0 +1,1002 @@
+[
+ {
+   "product_name": "apple pie",
+   "energy_100g": 272.7892889,
+   "carbohydrates_100g": 37.46488889,
+   "sugars_100g": 15.074,
+   "proteins_100g": 2.841555556,
+   "fat_100g": 13.43977778,
+   "fiber_100g": 2.148888889,
+   "cholesterol_100g": 0.0058
+ },
+ {
+   "product_name": "baby back ribs",
+   "energy_100g": 228.962,
+   "carbohydrates_100g": 10.71,
+   "sugars_100g": 7.14,
+   "proteins_100g": 14.29,
+   "fat_100g": 14.29,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.054
+ },
+ {
+   "product_name": "baklava",
+   "energy_100g": 429.244,
+   "carbohydrates_100g": 41.28,
+   "sugars_100g": 25.9675,
+   "proteins_100g": 4.33,
+   "fat_100g": 23.3975,
+   "fiber_100g": 1.825,
+   "cholesterol_100g": 0.00975
+ },
+ {
+   "product_name": "beef carpaccio",
+   "energy_100g": 263.2585,
+   "carbohydrates_100g": 2.1675,
+   "sugars_100g": 2.1675,
+   "proteins_100g": 12.0175,
+   "fat_100g": 22.6725,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.046
+ },
+ {
+   "product_name": "beef tartare",
+   "energy_100g": 552.0,
+   "carbohydrates_100g": 5.7,
+   "sugars_100g": 1.8,
+   "proteins_100g": 33.0,
+   "fat_100g": 44.0,
+   "fiber_100g": 1.4,
+   "cholesterol_100g": 0.034
+ },
+ {
+   "product_name": "beignets",
+   "energy_100g": 352.0,
+   "carbohydrates_100g": 0.0,
+   "sugars_100g": 5.984,
+   "proteins_100g": 11.616,
+   "fat_100g": 12.8,
+   "fiber_100g": 1.6,
+   "cholesterol_100g": 0.008
+ },
+ {
+   "product_name": "beet salad",
+   "energy_100g": 77.23683333,
+   "carbohydrates_100g": 7.11833,
+   "sugars_100g": 3.685,
+   "proteins_100g": 4.02833,
+   "fat_100g": 3.9516666,
+   "fiber_100g": 1.91666,
+   "cholesterol_100g": 0.0118
+ },
+ {
+   "product_name": "bibimbap",
+   "energy_100g": 146.0,
+   "carbohydrates_100g": 22.44,
+   "sugars_100g": 1.5,
+   "proteins_100g": 5.51,
+   "fat_100g": 3.5,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.059
+ },
+ {
+   "product_name": "bread pudding",
+   "energy_100g": 306.876,
+   "carbohydrates_100g": 43.36,
+   "sugars_100g": 31.86,
+   "proteins_100g": 4.42,
+   "fat_100g": 12.39,
+   "fiber_100g": 0.9,
+   "cholesterol_100g": 0.118
+ },
+ {
+   "product_name": "breakfast burrito",
+   "energy_100g": 228.484,
+   "carbohydrates_100g": 22.5075,
+   "sugars_100g": 1.345,
+   "proteins_100g": 11.71,
+   "fat_100g": 9.6025,
+   "fiber_100g": 1.9,
+   "cholesterol_100g": 0.08175
+ },
+ {
+   "product_name": "bruschetta",
+   "energy_100g": 85.50225,
+   "carbohydrates_100g": 7.3425,
+   "sugars_100g": 4.0875,
+   "proteins_100g": 2.68,
+   "fat_100g": 6.0925,
+   "fiber_100g": 1.65,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "caesar salad",
+   "energy_100g": 178.055,
+   "carbohydrates_100g": 7.16,
+   "sugars_100g": 1.575,
+   "proteins_100g": 7.89,
+   "fat_100g": 13.41,
+   "fiber_100g": 1.2,
+   "cholesterol_100g": 0.0185
+ },
+ {
+   "product_name": "cannoli",
+   "energy_100g": 254.0,
+   "carbohydrates_100g": 28.84,
+   "sugars_100g": 10.96,
+   "proteins_100g": 8.7,
+   "fat_100g": 11.04,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.038
+ },
+ {
+   "product_name": "caprese salad",
+   "energy_100g": 147.941,
+   "carbohydrates_100g": 8.45,
+   "sugars_100g": 7.04,
+   "proteins_100g": 3.52,
+   "fat_100g": 11.97,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.011
+ },
+ {
+   "product_name": "carrot cake",
+   "energy_100g": 419.9059286,
+   "carbohydrates_100g": 54.18357143,
+   "sugars_100g": 37.51714286,
+   "proteins_100g": 4.412857143,
+   "fat_100g": 21.55428571,
+   "fiber_100g": 1.8,
+   "cholesterol_100g": 0.032
+ },
+ {
+   "product_name": "ceviche",
+   "energy_100g": 82.0,
+   "carbohydrates_100g": 2.6,
+   "sugars_100g": 1.0,
+   "proteins_100g": 15.0,
+   "fat_100g": 1.3,
+   "fiber_100g": 0.5,
+   "cholesterol_100g": 0.038
+ },
+ {
+   "product_name": "cheese plate",
+   "energy_100g": 662.0,
+   "carbohydrates_100g": 8.3,
+   "sugars_100g": 0.5,
+   "proteins_100g": 45.0,
+   "fat_100g": 50.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.168
+ },
+ {
+   "product_name": "cheesecake",
+   "energy_100g": 331.176325,
+   "carbohydrates_100g": 36.938,
+   "sugars_100g": 26.64825,
+   "proteins_100g": 4.79875,
+   "fat_100g": 18.691,
+   "fiber_100g": 1.3825,
+   "cholesterol_100g": 0.0609
+ },
+ {
+   "product_name": "chicken curry",
+   "energy_100g": 135.035,
+   "carbohydrates_100g": 6.53,
+   "sugars_100g": 2.685,
+   "proteins_100g": 7.59,
+   "fat_100g": 9.485,
+   "fiber_100g": 1.6,
+   "cholesterol_100g": 0.0295
+ },
+ {
+   "product_name": "chicken quesadilla",
+   "energy_100g": 117.588,
+   "carbohydrates_100g": 10.61,
+   "sugars_100g": 0.735,
+   "proteins_100g": 7.515,
+   "fat_100g": 5.155,
+   "fiber_100g": 2.8,
+   "cholesterol_100g": 0.0155
+ },
+ {
+   "product_name": "chicken wings",
+   "energy_100g": 215.817,
+   "carbohydrates_100g": 4.611666667,
+   "sugars_100g": 1.792222222,
+   "proteins_100g": 16.14277778,
+   "fat_100g": 14.30611111,
+   "fiber_100g": 0.066666667,
+   "cholesterol_100g": 0.067944444
+ },
+ {
+   "product_name": "chocolate cake",
+   "energy_100g": 387.897,
+   "carbohydrates_100g": 60.0,
+   "sugars_100g": 45.88,
+   "proteins_100g": 3.53,
+   "fat_100g": 15.29,
+   "fiber_100g": 2.4,
+   "cholesterol_100g": 0.029
+ },
+ {
+   "product_name": "chocolate mousse",
+   "energy_100g": 268.875,
+   "carbohydrates_100g": 19.05,
+   "sugars_100g": 13.1,
+   "proteins_100g": 1.19,
+   "fat_100g": 23.81,
+   "fiber_100g": 2.4,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "churros",
+   "energy_100g": 400.086,
+   "carbohydrates_100g": 63.33,
+   "sugars_100g": 3.33,
+   "proteins_100g": 13.33,
+   "fat_100g": 8.33,
+   "fiber_100g": 3.3,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "clam chowder",
+   "energy_100g": 110.4976667,
+   "carbohydrates_100g": 9.046666667,
+   "sugars_100g": 1.548333333,
+   "proteins_100g": 4.616666667,
+   "fat_100g": 6.36,
+   "fiber_100g": 0.483333333,
+   "cholesterol_100g": 0.0245
+ },
+ {
+   "product_name": "club sandwich",
+   "energy_100g": 221.0,
+   "carbohydrates_100g": 19.9,
+   "sugars_100g": 2.9,
+   "proteins_100g": 17.2,
+   "fat_100g": 8.1,
+   "fiber_100g": 1.2,
+   "cholesterol_100g": 0.046
+ },
+ {
+   "product_name": "crab cakes",
+   "energy_100g": 191.8487143,
+   "carbohydrates_100g": 11.64571429,
+   "sugars_100g": 1.392857143,
+   "proteins_100g": 9.912857143,
+   "fat_100g": 11.38142857,
+   "fiber_100g": 0.685714286,
+   "cholesterol_100g": 0.048857143
+ },
+ {
+   "product_name": "creme brulee",
+   "energy_100g": 389.8886667,
+   "carbohydrates_100g": 30.36,
+   "sugars_100g": 27.75,
+   "proteins_100g": 3.936666667,
+   "fat_100g": 27.59333333,
+   "fiber_100g": 0.833333333,
+   "cholesterol_100g": 0.135333333
+ },
+ {
+   "product_name": "croque madame",
+   "energy_100g": 194.7,
+   "carbohydrates_100g": 15.4,
+   "sugars_100g": 2.7,
+   "proteins_100g": 10.0,
+   "fat_100g": 10.3,
+   "fiber_100g": 0.8,
+   "cholesterol_100g": 0.0799
+ },
+ {
+   "product_name": "cup cakes",
+   "energy_100g": 390.0,
+   "carbohydrates_100g": 53.0,
+   "sugars_100g": 40.0,
+   "proteins_100g": 3.0,
+   "fat_100g": 20.0,
+   "fiber_100g": 2.0,
+   "cholesterol_100g": 0.022
+ },
+ {
+   "product_name": "deviled eggs",
+   "energy_100g": 293.014,
+   "carbohydrates_100g": 1.72,
+   "sugars_100g": 0.0,
+   "proteins_100g": 10.34,
+   "fat_100g": 25.86,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.448
+ },
+ {
+   "product_name": "donuts",
+   "energy_100g": 428.9708571,
+   "carbohydrates_100g": 52.91,
+   "sugars_100g": 27.52428571,
+   "proteins_100g": 3.802857143,
+   "fat_100g": 22.87714286,
+   "fiber_100g": 1.971428571,
+   "cholesterol_100g": 0.027571429
+ },
+ {
+   "product_name": "dumplings",
+   "energy_100g": 119.5,
+   "carbohydrates_100g": 20.075,
+   "sugars_100g": 0.66,
+   "proteins_100g": 5.485,
+   "fat_100g": 2.16,
+   "fiber_100g": 0.95,
+   "cholesterol_100g": 0.0065
+ },
+ {
+   "product_name": "edamame",
+   "energy_100g": 202.01475,
+   "carbohydrates_100g": 14.3575,
+   "sugars_100g": 3.3675,
+   "proteins_100g": 18.2875,
+   "fat_100g": 8.9775,
+   "fiber_100g": 7.3,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "eggs benedict",
+   "energy_100g": 260.0,
+   "carbohydrates_100g": 11.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 11.0,
+   "fat_100g": 19.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.27
+ },
+ {
+   "product_name": "escargots",
+   "energy_100g": 90.6,
+   "carbohydrates_100g": 2.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 16.5,
+   "fat_100g": 1.4,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.056
+ },
+ {
+   "product_name": "falafel",
+   "energy_100g": 364.41525,
+   "carbohydrates_100g": 48.96,
+   "sugars_100g": 7.24,
+   "proteins_100g": 18.11,
+   "fat_100g": 16.7575,
+   "fiber_100g": 12.0,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "filet mignon",
+   "energy_100g": 267.1,
+   "carbohydrates_100g": 0.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 25.9,
+   "fat_100g": 17.6,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.096
+ },
+ {
+   "product_name": "fish and chips ",
+   "energy_100g": 134.1,
+   "carbohydrates_100g": 13.8,
+   "sugars_100g": 0.4,
+   "proteins_100g": 8.4,
+   "fat_100g": 5.1,
+   "fiber_100g": 0.9,
+   "cholesterol_100g": 0.0288
+ },
+ {
+   "product_name": "foi gras",
+   "energy_100g": 461.5,
+   "carbohydrates_100g": 4.7,
+   "sugars_100g": 0.0,
+   "proteins_100g": 11.5,
+   "fat_100g": 43.8,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.153
+ },
+ {
+   "product_name": "french fries",
+   "energy_100g": 141.01,
+   "carbohydrates_100g": 22.355,
+   "sugars_100g": 0.59,
+   "proteins_100g": 2.94,
+   "fat_100g": 5.0,
+   "fiber_100g": 2.4,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "french onion soup",
+   "energy_100g": 73.4925,
+   "carbohydrates_100g": 6.14,
+   "sugars_100g": 1.05,
+   "proteins_100g": 4.56,
+   "fat_100g": 3.685,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.011
+ },
+ {
+   "product_name": "french toast",
+   "energy_100g": 226.094,
+   "carbohydrates_100g": 32.65,
+   "sugars_100g": 7.54,
+   "proteins_100g": 5.665,
+   "fat_100g": 9.18,
+   "fiber_100g": 2.15,
+   "cholesterol_100g": 0.0385
+ },
+ {
+   "product_name": "fried calamari",
+   "energy_100g": 249.0,
+   "carbohydrates_100g": 25.9,
+   "sugars_100g": 25.9,
+   "proteins_100g": 12.6,
+   "fat_100g": 5.1,
+   "fiber_100g": 0.9,
+   "cholesterol_100g": 0.134
+ },
+ {
+   "product_name": "fried rice",
+   "energy_100g": 173.7,
+   "carbohydrates_100g": 32.8,
+   "sugars_100g": 32.8,
+   "proteins_100g": 4.0,
+   "fat_100g": 43.8,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.153
+ },
+ {
+   "product_name": "frozen yogurt",
+   "energy_100g": 164.204381,
+   "carbohydrates_100g": 29.88904762,
+   "sugars_100g": 22.58,
+   "proteins_100g": 4.47047619,
+   "fat_100g": 3.12952381,
+   "fiber_100g": 0.404761905,
+   "cholesterol_100g": 0.009142857
+ },
+ {
+   "product_name": "garlic bread",
+   "energy_100g": 334.65975,
+   "carbohydrates_100g": 44.73,
+   "sugars_100g": 1.65,
+   "proteins_100g": 8.228333333,
+   "fat_100g": 13.585,
+   "fiber_100g": 2.641666667,
+   "cholesterol_100g": 0.00075
+ },
+ {
+   "product_name": "gnocchi",
+   "energy_100g": 199.8722857,
+   "carbohydrates_100g": 42.12142857,
+   "sugars_100g": 1.272857143,
+   "proteins_100g": 5.28,
+   "fat_100g": 0.841428571,
+   "fiber_100g": 1.9,
+   "cholesterol_100g": 0.001285714
+ },
+ {
+   "product_name": "greek salad",
+   "energy_100g": 76.32066667,
+   "carbohydrates_100g": 6.64,
+   "sugars_100g": 3.41,
+   "proteins_100g": 1.863333333,
+   "fat_100g": 4.93,
+   "fiber_100g": 1.633333333,
+   "cholesterol_100g": 0.002333333
+ },
+ {
+   "product_name": "grilled cheese sandwich",
+   "energy_100g": 340.0,
+   "carbohydrates_100g": 27.0,
+   "sugars_100g": 5.0,
+   "proteins_100g": 11.0,
+   "fat_100g": 10.5,
+   "fiber_100g": 0.9,
+   "cholesterol_100g": 0.134
+ },
+ {
+   "product_name": "grilled salmon",
+   "energy_100g": 149.4945,
+   "carbohydrates_100g": 0.43,
+   "sugars_100g": 0.0,
+   "proteins_100g": 21.37,
+   "fat_100g": 6.435,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.0735
+ },
+ {
+   "product_name": "guacamole",
+   "energy_100g": 145.1071429,
+   "carbohydrates_100g": 8.457857143,
+   "sugars_100g": 2.886428571,
+   "proteins_100g": 2.763571429,
+   "fat_100g": 12.13,
+   "fiber_100g": 5.107142857,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "gyoza",
+   "energy_100g": 210.0,
+   "carbohydrates_100g": 20.0,
+   "sugars_100g": 1.0,
+   "proteins_100g": 9.0,
+   "fat_100g": 3.0,
+   "fiber_100g": 1.1,
+   "cholesterol_100g": 0.018
+ },
+ {
+   "product_name": "hamburger",
+   "energy_100g": 267.441,
+   "carbohydrates_100g": 45.35,
+   "sugars_100g": 4.65,
+   "proteins_100g": 9.3,
+   "fat_100g": 5.23,
+   "fiber_100g": 2.3,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "hot and sour soup",
+   "energy_100g": 39.0,
+   "carbohydrates_100g": 4.4,
+   "sugars_100g": 0.4,
+   "proteins_100g": 2.6,
+   "fat_100g": 22.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.06
+ },
+ {
+   "product_name": "hot dog",
+   "energy_100g": 185.942,
+   "carbohydrates_100g": 44.19,
+   "sugars_100g": 4.65,
+   "proteins_100g": 9.3,
+   "fat_100g": 2.33,
+   "fiber_100g": 11.6,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "huevos rancheros",
+   "energy_100g": 477.044,
+   "carbohydrates_100g": 25.0,
+   "sugars_100g": 6.82,
+   "proteins_100g": 36.36,
+   "fat_100g": 25.0,
+   "fiber_100g": 9.1,
+   "cholesterol_100g": 0.761
+ },
+ {
+   "product_name": "hummus",
+   "energy_100g": 204.7013273,
+   "carbohydrates_100g": 16.56254545,
+   "sugars_100g": 2.865090909,
+   "proteins_100g": 6.172181818,
+   "fat_100g": 13.32836364,
+   "fiber_100g": 4.727272727,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "ice cream",
+   "energy_100g": 220.8170693,
+   "carbohydrates_100g": 26.5144802,
+   "sugars_100g": 21.2939604,
+   "proteins_100g": 3.578787129,
+   "fat_100g": 11.61871287,
+   "fiber_100g": 0.523514851,
+   "cholesterol_100g": 0.040905941
+ },
+ {
+   "product_name": "lasagna",
+   "energy_100g": 198.8914545,
+   "carbohydrates_100g": 29.57818182,
+   "sugars_100g": 2.2,
+   "proteins_100g": 8.3,
+   "fat_100g": 5.115454545,
+   "fiber_100g": 1.772727273,
+   "cholesterol_100g": 0.020818182
+ },
+ {
+   "product_name": "lobster bisque",
+   "energy_100g": 120.217,
+   "carbohydrates_100g": 6.941111111,
+   "sugars_100g": 2.144444444,
+   "proteins_100g": 2.738888889,
+   "fat_100g": 8.968888889,
+   "fiber_100g": 0.222222222,
+   "cholesterol_100g": 0.034888889
+ },
+ {
+   "product_name": "lobster roll sandwich",
+   "energy_100g": 200.0,
+   "carbohydrates_100g": 13.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 17.0,
+   "fat_100g": 8.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.053
+ },
+ {
+   "product_name": "macaroni and cheese",
+   "energy_100g": 199.7562,
+   "carbohydrates_100g": 21.444,
+   "sugars_100g": 1.38,
+   "proteins_100g": 6.334,
+   "fat_100g": 9.508,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.0286
+ },
+ {
+   "product_name": "macarons",
+   "energy_100g": 380.0,
+   "carbohydrates_100g": 53.0,
+   "sugars_100g": 46.0,
+   "proteins_100g": 8.0,
+   "fat_100g": 17.0,
+   "fiber_100g": 4.0,
+   "cholesterol_100g": 0.007
+ },
+ {
+   "product_name": "miso soup",
+   "energy_100g": 375.947,
+   "carbohydrates_100g": 43.01,
+   "sugars_100g": 21.51,
+   "proteins_100g": 21.51,
+   "fat_100g": 10.75,
+   "fiber_100g": 10.8,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "mussels",
+   "energy_100g": 71.461,
+   "carbohydrates_100g": 2.985,
+   "sugars_100g": 0.165,
+   "proteins_100g": 8.185,
+   "fat_100g": 2.77,
+   "fiber_100g": 0.05,
+   "cholesterol_100g": 0.029
+ },
+ {
+   "product_name": "nachos",
+   "energy_100g": 220.0,
+   "carbohydrates_100g": 5.0,
+   "sugars_100g": 2.0,
+   "proteins_100g": 12.0,
+   "fat_100g": 17.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.051
+ },
+ {
+   "product_name": "onion rings",
+   "energy_100g": 425.7024545,
+   "carbohydrates_100g": 50.84545455,
+   "sugars_100g": 3.942727273,
+   "proteins_100g": 4.523636364,
+   "fat_100g": 22.29545455,
+   "fiber_100g": 2.609090909,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "oysters",
+   "energy_100g": 160.0,
+   "carbohydrates_100g": 10.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 19.0,
+   "fat_100g": 5.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.1
+ },
+ {
+   "product_name": "pad thai",
+   "energy_100g": 148.897,
+   "carbohydrates_100g": 25.65,
+   "sugars_100g": 10.41,
+   "proteins_100g": 4.09,
+   "fat_100g": 3.35,
+   "fiber_100g": 1.1,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "paella",
+   "energy_100g": 422.074,
+   "carbohydrates_100g": 82.22,
+   "sugars_100g": 2.22,
+   "proteins_100g": 13.33,
+   "fat_100g": 3.33,
+   "fiber_100g": 2.2,
+   "cholesterol_100g": 0.007
+ },
+ {
+   "product_name": "pancakes",
+   "energy_100g": 262.3423333,
+   "carbohydrates_100g": 47.09666667,
+   "sugars_100g": 12.05333333,
+   "proteins_100g": 5.3125,
+   "fat_100g": 5.219166667,
+   "fiber_100g": 1.783333333,
+   "cholesterol_100g": 0.00825
+ },
+ {
+   "product_name": "panna cotta",
+   "energy_100g": 320.0,
+   "carbohydrates_100g": 15.0,
+   "sugars_100g": 1.5,
+   "proteins_100g": 2.0,
+   "fat_100g": 28.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.1
+ },
+ {
+   "product_name": "peking duck",
+   "energy_100g": 240.0,
+   "carbohydrates_100g": 15.0,
+   "sugars_100g": 1.5,
+   "proteins_100g": 11.0,
+   "fat_100g": 15.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.043
+ },
+ {
+   "product_name": "pho",
+   "energy_100g": 90.0,
+   "carbohydrates_100g": 11.0,
+   "sugars_100g": 2.0,
+   "proteins_100g": 7.0,
+   "fat_100g": 2.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.12
+ },
+ {
+   "product_name": "pizza",
+   "energy_100g": 251.12686,
+   "carbohydrates_100g": 26.591,
+   "sugars_100g": 2.262,
+   "proteins_100g": 10.4336,
+   "fat_100g": 11.2206,
+   "fiber_100g": 1.264,
+   "cholesterol_100g": 0.02194
+ },
+ {
+   "product_name": "pork chop",
+   "energy_100g": 210.0,
+   "carbohydrates_100g": 0.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 26.0,
+   "fat_100g": 11.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.84
+ },
+ {
+   "product_name": "poutine",
+   "energy_100g": 220.0,
+   "carbohydrates_100g": 16.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 7.0,
+   "fat_100g": 14.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.27
+ },
+ {
+   "product_name": "prime rib",
+   "energy_100g": 340.0,
+   "carbohydrates_100g": 0.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 23.0,
+   "fat_100g": 27.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.83
+ },
+ {
+   "product_name": "pulled pork sandwich",
+   "energy_100g": 170.0,
+   "carbohydrates_100g": 27.0,
+   "sugars_100g": 18.0,
+   "proteins_100g": 11.0,
+   "fat_100g": 2.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.33
+ },
+ {
+   "product_name": "ramen",
+   "energy_100g": 359.934,
+   "carbohydrates_100g": 68.0,
+   "sugars_100g": 4.0,
+   "proteins_100g": 16.0,
+   "fat_100g": 2.0,
+   "fiber_100g": 8.0,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "ravioli",
+   "energy_100g": 219.402,
+   "carbohydrates_100g": 33.06,
+   "sugars_100g": 1.853448276,
+   "proteins_100g": 10.0862069,
+   "fat_100g": 6.245517241,
+   "fiber_100g": 2.024137931,
+   "cholesterol_100g": 0.038241379
+ },
+ {
+   "product_name": "red velvet cake",
+   "energy_100g": 413.6851,
+   "carbohydrates_100g": 51.19,
+   "sugars_100g": 35.483,
+   "proteins_100g": 6.744,
+   "fat_100g": 21.146,
+   "fiber_100g": 4.44,
+   "cholesterol_100g": 0.0334
+ },
+ {
+   "product_name": "risotto",
+   "energy_100g": 319.0991429,
+   "carbohydrates_100g": 67.11714286,
+   "sugars_100g": 2.5,
+   "proteins_100g": 7.575714286,
+   "fat_100g": 2.294285714,
+   "fiber_100g": 1.585714286,
+   "cholesterol_100g": 0.003857143
+ },
+ {
+   "product_name": "samosa",
+   "energy_100g": 262.0,
+   "carbohydrates_100g": 24.0,
+   "sugars_100g": 1.6,
+   "proteins_100g": 3.5,
+   "fat_100g": 17.0,
+   "fiber_100g": 2.1,
+   "cholesterol_100g": 0.027
+ },
+ {
+   "product_name": "sashimi",
+   "energy_100g": 140.0,
+   "carbohydrates_100g": 1.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 21.2,
+   "fat_100g": 4.8,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.1
+ },
+ {
+   "product_name": "scallops",
+   "energy_100g": 84.1758,
+   "carbohydrates_100g": 2.304,
+   "sugars_100g": 0.0,
+   "proteins_100g": 14.776,
+   "fat_100g": 0.798,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.0334
+ },
+ {
+   "product_name": "seaweed salad",
+   "energy_100g": 85.64166667,
+   "carbohydrates_100g": 14.97666667,
+   "sugars_100g": 14.5,
+   "proteins_100g": 0.333333333,
+   "fat_100g": 4.406666667,
+   "fiber_100g": 18.33333333,
+   "cholesterol_100g": 0.0
+ },
+ {
+   "product_name": "shrimp and grits",
+   "energy_100g": 179.0,
+   "carbohydrates_100g": 10.5,
+   "sugars_100g": 0.3,
+   "proteins_100g": 11.5,
+   "fat_100g": 10.0,
+   "fiber_100g": 0.7,
+   "cholesterol_100g": 0.075
+ },
+ {
+   "product_name": "spaghetti bolognese",
+   "energy_100g": 99.185,
+   "carbohydrates_100g": 12.7,
+   "sugars_100g": 1.4,
+   "proteins_100g": 6.51,
+   "fat_100g": 2.4,
+   "fiber_100g": 1.71,
+   "cholesterol_100g": 0.02
+ },
+ {
+   "product_name": "spaghetti carbonara",
+   "energy_100g": 200.0,
+   "carbohydrates_100g": 26.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 9.0,
+   "fat_100g": 6.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.036
+ },
+ {
+   "product_name": "spring rolls",
+   "energy_100g": 190.005,
+   "carbohydrates_100g": 19.05,
+   "sugars_100g": 0.0,
+   "proteins_100g": 11.9,
+   "fat_100g": 7.14,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.024
+ },
+ {
+   "product_name": "steak",
+   "energy_100g": 280.0,
+   "carbohydrates_100g": 0.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 26.0,
+   "fat_100g": 18.0,
+   "fiber_100g": 0.0,
+   "cholesterol_100g": 0.097
+ },
+ {
+   "product_name": "strawberry shortcake",
+   "energy_100g": 308.72825,
+   "carbohydrates_100g": 41.465,
+   "sugars_100g": 22.6025,
+   "proteins_100g": 5.6225,
+   "fat_100g": 13.6175,
+   "fiber_100g": 2.875,
+   "cholesterol_100g": 0.07175
+ },
+ {
+   "product_name": "sushi",
+   "energy_100g": 170.0,
+   "carbohydrates_100g": 18.0,
+   "sugars_100g": 3.0,
+   "proteins_100g": 4.0,
+   "fat_100g": 9.0,
+   "fiber_100g": 2.0,
+   "cholesterol_100g": 0.08
+ },
+ {
+   "product_name": "tacos",
+   "energy_100g": 210.0,
+   "carbohydrates_100g": 20.0,
+   "sugars_100g": 2.0,
+   "proteins_100g": 9.0,
+   "fat_100g": 10.0,
+   "fiber_100g": 3.0,
+   "cholesterol_100g": 0.025
+ },
+ {
+   "product_name": "takoyaki",
+   "energy_100g": 150.0,
+   "carbohydrates_100g": 15.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 8.0,
+   "fat_100g": 6.0,
+   "fiber_100g": 1.0,
+   "cholesterol_100g": 0.049
+ },
+ {
+   "product_name": "tiramisu",
+   "energy_100g": 283.5222857,
+   "carbohydrates_100g": 34.83,
+   "sugars_100g": 24.75428571,
+   "proteins_100g": 3.404285714,
+   "fat_100g": 14.75,
+   "fiber_100g": 0.628571429,
+   "cholesterol_100g": 0.068714286
+ },
+ {
+   "product_name": "tuna tartare",
+   "energy_100g": 180.0,
+   "carbohydrates_100g": 3.0,
+   "sugars_100g": 0.0,
+   "proteins_100g": 14.0,
+   "fat_100g": 12.0,
+   "fiber_100g": 2.0,
+   "cholesterol_100g": 0.021
+ },
+ {
+   "product_name": "waffles",
+   "energy_100g": 264.7300571,
+   "carbohydrates_100g": 40.81571429,
+   "sugars_100g": 6.490571429,
+   "proteins_100g": 5.263142857,
+   "fat_100g": 8.958571429,
+   "fiber_100g": 1.78,
+   "cholesterol_100g": 0.006
+ }
+]

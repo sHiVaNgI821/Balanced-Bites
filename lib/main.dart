@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:balancedbites/MultiSelectChip.dart';
+import 'package:balancedbites/selection.dart';
+import 'package:balancedbites/user.dart';
 
-void main() {
-  runApp(
-      MyApp()
-  );
-}
+void main() => runApp(MaterialApp(
+  title: "App",
+  home: MyApp(),
+));
 
 
 class MyApp extends StatefulWidget {
@@ -14,29 +16,30 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int numSelected=0;
-  @override
-  void initState() {
-    super.initState();
-    numSelected = 0;
-  }
-  setSelectedRadio(int val) {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  User _user1 = User();
+
+  void updateUser(String value) {
     setState(() {
-      numSelected = val;
+      _user1.name = value;
     });
   }
+  void updateNutrient(List<String> value) {
+    setState(() {
+      _user1.nutrients = value;
+    });
+  }
+  List<String> selectedReportList = List();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Balanced Bites',
-      routes: {
-        'NextPage':(context)=>SecondRoute()
-      },
+
+
       home:Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/bg.jpg'), fit: BoxFit.fitHeight)),
+                image: AssetImage('images/bg.jpg'), fit: BoxFit.fitHeight,colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.65), BlendMode.dstATop),)),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -75,12 +78,18 @@ class _MyAppState extends State<MyApp> {
                   ),
 
                   Form(
-
+                    key: _formKey,
                       child: Column(
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.fromLTRB(55.0, 20.0, 55.0, 20.0),
                             child: TextFormField(
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter your name';
+                                }
+                                return null;
+                              },
                               decoration: InputDecoration(
                                   hintText: "Can we know your name?",
                                   fillColor: Colors.white70,
@@ -88,141 +97,51 @@ class _MyAppState extends State<MyApp> {
                                   hintStyle: TextStyle(color: Colors.black54),
                               ),
                               style: TextStyle(color: Colors.black),
+                                onSaved: (String value) {
+                                  print(value);
+                                  //this._user1.name = value;
+                                  updateUser(value);
+                                }
                             ),
                           ),
-                          Text('Which of these would you like to track?',
-                            style: TextStyle(
+                          Center(
+                            child: Text('Which of these would you like to track?',
+                              style: TextStyle(
 
-                              color: Colors.white,
-                              fontSize: 21.0,
-                                fontFamily: 'Pacifico'
+                                color: Colors.white,
+                                fontSize: 21.0,
+                                  fontFamily: 'Pacifico'
+                              ),
                             ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Radio(
-                                value: 1,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Calories',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                              ),
-                              ),
-                              Radio(
-                                value: 2,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Protiens',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                                ),
-                              ),
-                              Radio(
-                                value: 3,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Carbs',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                                ),
-                              ),
-
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Radio(
-                                value: 4,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Fibre',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                                ),
-                              ),
-                              Radio(
-                                value: 5,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Sugar',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                                ),
-                              ),
-                              Radio(
-                                value: 6,
-                                groupValue: numSelected,
-                                onChanged: (val){
-                                  setSelectedRadio(val);
-                                },
-                              ),
-                              Text(
-                                'Cholestrol',
-                                style: TextStyle(
-
-                                  color: Colors.white,
-                                  fontSize: 19.0,
-                                    fontFamily: 'Pacifico'
-                                ),
-                              ),
-
-                            ],
+                          MultiSelectChip(
+                            ["Protein", "Carbohydrates", "Calories", "Fat", "Fibre","Cholestrol", "Sugar"],
+                            onSelectionChanged: (selectedList) {
+                              setState(() {
+                                selectedReportList = selectedList;
+                              });
+                            },
                           ),
                           Container(
                             child: RaisedButton(
                               child: Text("Let's go"),
                               onPressed: (){
-                                Navigator.pushNamed(context, 'NextPage');
-
+                                updateNutrient(selectedReportList);
+                                if(_formKey.currentState.validate()){
+                                  _formKey.currentState.save();
+                                }
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> Scaffold(
+                                  body: SpinBoxInput(
+                                      user1: _user1, list: selectedReportList),
+                                ),
+                                ),
+                                );
                               },
                             ),
                           ),
-
                         ],
-
-
                   ),
                   ),
-
-
                   ],
 
               ),
@@ -235,21 +154,4 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Second Route"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
+
