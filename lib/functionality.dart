@@ -1,12 +1,11 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:balancedbites/addFoodItem.dart';
 import 'package:balancedbites/recomm_cards.dart';
 import 'package:balancedbites/recommendations.dart';
 import 'package:balancedbites/selection.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:balancedbites/meal.dart';
 import 'package:balancedbites/user.dart';
-
 import 'package:balancedbites/search_screen.dart';
 import 'package:balancedbites/homeScreen.dart';
 
@@ -22,12 +21,12 @@ class _functionalityState extends State<functionality>
   User user1 = User();
 
   _functionalityState(this.user1);
-  int selectedPage = 0;
+  int selectedPage = 2;
   AnimationController _animationController;
   Animation<double> animation;
   CurvedAnimation curve;
 
-  final iconList = <IconData>[Icons.home, Icons.search];
+  final iconList = <IconData>[Icons.restaurant, Icons.search];
 
   @override
   void initState() {
@@ -59,8 +58,9 @@ class _functionalityState extends State<functionality>
   @override
   Widget build(BuildContext context) {
     final _pageList = [
-      homeScreen(user1: user1),
+      LandingScreen(),
       TextApp(),
+      homeScreen(user1: user1),
     ];
     return Scaffold(
         extendBody: true,
@@ -72,13 +72,16 @@ class _functionalityState extends State<functionality>
             elevation: 20,
             backgroundColor: Colors.white,
             child: Icon(
-              Icons.restaurant,
+              Icons.home,
               //color: HexColor('#373A36'),
               color: Colors.grey,
             ),
             onPressed: () {
               _animationController.reset();
               _animationController.forward();
+              setState(() {
+                selectedPage=2;
+              });
             },
           ),
         ),

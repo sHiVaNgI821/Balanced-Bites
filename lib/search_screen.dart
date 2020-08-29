@@ -140,7 +140,7 @@ class _TextAppState extends State<TextApp> {
 
 
   Food filter(value) {
-    return allValues.where((element) => element.name == value).toList()[0];
+    return allValues.where((element) => element.name.toLowerCase().contains(value.toLowerCase()) ).toList()[0];
   }
 
   /*void _filterValues(value) {
@@ -190,6 +190,7 @@ class _TextAppState extends State<TextApp> {
                           TextField(
                             decoration: InputDecoration(
                               hintText: "Enter a dish",
+
                             ),
                             controller: myController,
                             style: TextStyle(color: Colors.black),
@@ -198,7 +199,8 @@ class _TextAppState extends State<TextApp> {
               },*/
                           ),
                           RaisedButton(
-                            child: Text('Show'),
+                            color: Colors.green[300],
+                            child: Text('Show',style: TextStyle(fontSize: 18),),
                             onPressed: () {
                               setState(() {
                                 enteredFood = myController.text;
@@ -277,6 +279,21 @@ class _TextAppState extends State<TextApp> {
                     ),
                     SliverToBoxAdapter(
                       child: Container(
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(100, 20, 100, 120),
+                            child: RaisedButton(
+                              color: Colors.green[300],
+                              onPressed: (){
+                                foodList.add(filter(enteredFood));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Add this food',style: TextStyle(fontSize: 20),),
+                              ),
+                            ),
+                          ),
+                        ),
                         color: Colors.amber[700],
                         height: 200,
                       ),

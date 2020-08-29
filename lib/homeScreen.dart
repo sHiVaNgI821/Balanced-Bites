@@ -3,8 +3,8 @@ import 'package:balancedbites/recommendations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
-import 'package:balancedbites/meal.dart';
 import 'package:balancedbites/user.dart';
+import 'package:balancedbites/model.dart';
 
 class homeScreen extends StatefulWidget {
   User user1 = User();
@@ -112,7 +112,7 @@ class _homeScreenState extends State<homeScreen> {
                         fontWeight: FontWeight.w700),
                   ),
                 ),
-                if (meals.isEmpty)
+                if (foodList.isEmpty)
                   Padding(
                     padding:
                     const EdgeInsets.only(left: 32, right: 32, bottom: 10),
@@ -143,8 +143,8 @@ class _homeScreenState extends State<homeScreen> {
                         children: <Widget>[
                           SizedBox(
                             width: 32,
-                          ), for (int i = 0; i < meals.length; i++)
-                            _MealCard(meal: meals[i]),
+                          ), for (int i = 0; i < foodList.length; i++)
+                            _MealCard(meal: foodList[i], user: user1,),
                         ],
                       ),
                     ),
@@ -503,9 +503,10 @@ class _DietProgress extends StatelessWidget {
 }
 
 class _MealCard extends StatelessWidget {
-  Meal meal;
+  Food meal;
+  User user;
 
-  _MealCard({Key key, @required this.meal}) : super(key: key);
+  _MealCard({Key key, @required this.meal, @required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -538,13 +539,18 @@ class _MealCard extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        meal.name,
+                        meal.name.toUpperCase(),
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
-                      Text(meal.protein),
-                      Text(meal.fat),
-                      //Text(meal.carbs),
+                      if(user.nutrients.contains('Calories'))Text('Calories: ${meal.energy.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Protein'))Text('Protein: ${meal.protein.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Carbohydrates'))Text('Carbohydrates: ${meal.carbs.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Fat'))Text('Fat: ${meal.fat.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Cholestrol'))Text('Cholestrol: ${meal.cholestrol.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Fibre'))Text('Fibre: ${meal.fibre.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('Sugar'))Text('Sugar: ${meal.sugar.toStringAsFixed(2)}'),
+
                       SizedBox(height: 16),
                     ],
                   ),
