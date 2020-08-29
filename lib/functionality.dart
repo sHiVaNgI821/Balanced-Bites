@@ -20,6 +20,7 @@ class _functionalityState extends State<functionality> {
    homeScreen(),
    TextApp(),
    recommCards(),
+
  ];
   /*@override
   void initState(){
