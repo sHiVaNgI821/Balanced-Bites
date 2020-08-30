@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'user.dart';
 
@@ -17,7 +18,7 @@ class SpinBoxes extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(nutrient, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text(nutrient.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
             Container(
               height: 60,
               width: 150,
@@ -30,8 +31,10 @@ class SpinBoxes extends StatelessWidget {
                 },
               ),
             ),
-            RaisedButton(
-              shape: Border.all(width: 2, color: Colors.blueGrey),
+            IconButton(
+              color: Colors.green.shade900,
+      icon: Icon(Icons.send,size: 30,),
+              //shape: Border.all(width: 2, color: Colors.blueGrey),
                 onPressed: () {
                     if(user1.nutrientVal == null){
                       user1.nutrientVal = [last.toInt()];
@@ -41,7 +44,9 @@ class SpinBoxes extends StatelessWidget {
                     print(user1.nutrientVal);
 
                 },
-                child: Text("Done"))
+                //visualDensity: VisualDensity.adaptivePlatformDensity,
+
+            ),
           ],
         ),
         SizedBox(

@@ -1,4 +1,6 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:animations/animations.dart';
+import 'package:balancedbites/dashboard.dart';
 import 'package:balancedbites/recommendations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -23,7 +25,7 @@ class _homeScreenState extends State<homeScreen> {
       children: [
         Positioned(
             top: 0,
-            height: height * 0.35,
+            height: height * 0.34,
             left: 0,
             right: 0,
             child: ClipRRect(
@@ -31,33 +33,31 @@ class _homeScreenState extends State<homeScreen> {
                 bottom: const Radius.circular(40),
               ),
               child: Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.only(
-                      top: 40, left: 32, right: 16, bottom: 10),
+
+
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ListTile(
-                          title: Text(
-                            "BALANCED BITES",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                            ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 30, left: 32, right: 16),
+                          child: TypewriterAnimatedTextKit(
+                              onTap: () {
+                                print("Tap Event");
+                              },
+                              text: [
+                                "BALANCED BITES"
+                              ],
+                              textStyle: TextStyle(
+                                  fontSize: 30.0,
+                                  //fontFamily: "Horizon"
+                              ),isRepeatingAnimation: false,
+                              textAlign: TextAlign.start,
+                              alignment: AlignmentDirectional.topStart // or Alignment.topLeft
                           ),
-                          subtitle: Text(
-                            ""
-                                "Hello, ${user1.name}!",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                              fontSize: 22,
-                              color: Colors.black,
-                            ),
-                          ),
-                          trailing:
-                          ClipOval(child: Image.asset("images/user.png")),
                         ),
-                        Row(
+                        SizedBox(height: 20),
+                        /*Row(
                           children: [
                             _RadialProgress(
                               width: height * 0.2,
@@ -84,13 +84,24 @@ class _homeScreenState extends State<homeScreen> {
                                   height: 10,
                                 ),
                               ],
-                            )
-                          ],
-                        ),
-                      ])),
-            )),
+                            )*/
+                         // ],
+
+
+               Expanded(
+                 child: ClipRRect(borderRadius: const BorderRadius.vertical(
+                   top: const Radius.circular(40)
+                  ),
+                 child:Dashboard(user1)),
+               ),
+                      ]
+                  ),
+                        ),),),
+
+            /*),
+            )),*/
         Positioned(
-          top: height * 0.38,
+          top: height * 0.36,
           left: 0,
           right: 0,
           child: Container(
@@ -444,63 +455,6 @@ class _RadialPainter extends CustomPainter {
   }
 }
 
-class _DietProgress extends StatelessWidget {
-  final String nut;
-  final int leftAmount;
-  final double progress;
-  final Color progressColor;
-  final double width;
-  const _DietProgress(
-      {Key key,
-        this.nut,
-        this.leftAmount,
-        this.progress,
-        this.progressColor,
-        this.width})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          nut,
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Stack(children: [
-              Container(
-                height: 8,
-                width: width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  color: Colors.black12,
-                ),
-              ),
-              Container(
-                height: 8,
-                width: width * progress,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                  color: progressColor,
-                ),
-              ),
-            ]),
-            SizedBox(width: 10),
-            Text("${leftAmount} left"),
-          ],
-        )
-      ],
-    );
-  }
-}
 
 class _MealCard extends StatelessWidget {
   Meal meal;

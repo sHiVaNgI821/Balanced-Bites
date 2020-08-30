@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:balancedbites/functionality.dart';
@@ -50,7 +51,11 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
                 pinned: true,
                 backgroundColor: Colors.orangeAccent,
                 flexibleSpace: FlexibleSpaceBar(
-                  title: Text('Let\'s set a goal', style: TextStyle(fontSize: 25),),
+                  /*title: *//*FadeAnimatedTextKit(isRepeatingAnimation: false,
+                    //duration: Duration(milliseconds: 5000),
+                    text: ["do IT!", "do it RIGHT!!", "do it RIGHT NOW!!!"],
+                    textStyle: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
+                  ),*/
                   background: Image.asset('images/appbar.PNG', fit: BoxFit.fitHeight,),
                 ),
               ),
@@ -58,7 +63,7 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
                child: Container(
                  child: Padding(
                     padding: const EdgeInsets.fromLTRB(55, 40, 55, 30),
-                       child: Center(child: Text('Hello ${user1.name} !!! ',
+                       child: Center(child: Text('Hello ${user1.name}!! ',
                          style: TextStyle(fontFamily:'Pacifico', fontSize: 35, color: Colors.green.shade900 ), ),),
                ),
 
@@ -74,9 +79,13 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
               ),
               SliverToBoxAdapter(
                 child: Center(
-                  child: RaisedButton(
-                      child: Text("Finished", style: TextStyle(fontSize: 24),),
-                      shape: Border.all(width: 2,color: Colors.blueGrey),
+                  child: RaisedButton(color: Colors.white,
+                    /*icon: Icon(Icons.send ,size:30),*/
+                      child: Text("Finished", style: TextStyle(fontSize: 20),),
+                      /*colorBrightness:Brightness.light ,
+                      splashColor: Colors.yellow,
+                      color: Colors.redAccent,*/
+                      //shape: Border.all(width: 2,color: Colors.white),
                       onPressed: () {
                         print(user1.name);
                         print(user1.nutrients);
