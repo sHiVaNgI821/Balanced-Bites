@@ -51,6 +51,8 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
                 pinned: true,
                 backgroundColor: Colors.orangeAccent,
                 flexibleSpace: FlexibleSpaceBar(
+                  title: Text('Let\'s set a goal',
+                    style: TextStyle( fontSize: 25, color: Colors.white),),
                   /*title: *//*FadeAnimatedTextKit(isRepeatingAnimation: false,
                     //duration: Duration(milliseconds: 5000),
                     text: ["do IT!", "do it RIGHT!!", "do it RIGHT NOW!!!"],
@@ -79,25 +81,28 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
               ),
               SliverToBoxAdapter(
                 child: Center(
-                  child: RaisedButton(color: Colors.white,
-                    /*icon: Icon(Icons.send ,size:30),*/
-                      child: Text("Finished", style: TextStyle(fontSize: 20),),
-                      /*colorBrightness:Brightness.light ,
-                      splashColor: Colors.yellow,
-                      color: Colors.redAccent,*/
-                      //shape: Border.all(width: 2,color: Colors.white),
-                      onPressed: () {
-                        print(user1.name);
-                        print(user1.nutrients);
-                        print(user1.nutrientVal);
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute( builder: (context) => Scaffold( body: functionality(user1),
-                                  //functionality(user1),
-                                )
-                            )
-                        );
-                      },
+                  child: 
+                  ClipRRect(borderRadius: BorderRadius.vertical(top: Radius.circular(12),bottom: Radius.circular(12),),
+                    child: RaisedButton(color: Colors.black38,
+                      /*icon: Icon(Icons.send ,size:30),*/
+                        child: Text("Done", style: TextStyle(fontFamily:'Pacifico', fontSize: 20, color: Colors.white),),
+                        /*colorBrightness:Brightness.light ,
+                        splashColor: Colors.yellow,
+                        color: Colors.redAccent,*/
+                        //shape: Border.all(width: 2,color: Colors.white),
+                        onPressed: () {
+                          print(user1.name);
+                          print(user1.nutrients);
+                          print(user1.nutrientVal);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute( builder: (context) => Scaffold( body: functionality(user1),
+                                    //functionality(user1),
+                                  )
+                              )
+                          );
+                        },
+                    ),
                   ),
                 ),
 

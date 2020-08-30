@@ -10,6 +10,7 @@ class SpinBoxes extends StatelessWidget {
   String nutrient;
   User user1=User();
   int nutValue;
+  //String unit = (nutrient.toUpperCase() == "CHOLESTROL" || nutrient.toUpperCase() == "FIBRE")? "mg" : "g";
   SpinBoxes(this.user1, this.nutrient);
   Widget build(BuildContext context) {
     return Column(
@@ -18,14 +19,17 @@ class SpinBoxes extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(nutrient.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+
+            Text(nutrient.toUpperCase()+"\n(in g) ", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+            //Text("mg", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+
             Container(
               height: 60,
               width: 150,
               child: SpinBox(
                 min: 1,
-                max: 100,
-                value: 50,
+                max: 2000,
+                value: 0,
                 onChanged: (value) {
                     last = value;
                 },
