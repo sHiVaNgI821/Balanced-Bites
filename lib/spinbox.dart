@@ -10,6 +10,7 @@ class SpinBoxes extends StatelessWidget {
   String nutrient;
   User user1=User();
   int nutValue;
+  //if (nutrient == "carbohydartes"){}
   //String unit = (nutrient.toUpperCase() == "CHOLESTROL" || nutrient.toUpperCase() == "FIBRE")? "mg" : "g";
   SpinBoxes(this.user1, this.nutrient);
   Widget build(BuildContext context) {
