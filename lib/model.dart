@@ -12,7 +12,12 @@ class Food {
   Food(this.name, this.energy, this.carbs, this.sugar, this.protein, this.fat,
       this.fibre, this.cholestrol);
 }
-var foodList=[];
+var foodList=[Food('hello',0.0,0.0,0.0,0.0,0.0,0.0,0.0)];
+
+List<Food> allFoodItems=[];
+Food filter(value) {
+  return allFoodItems.where((element) => element.name.toLowerCase().contains(value.toLowerCase()) ).toList()[0];
+}
   /*factory Food.fromJson(Map<String, dynamic> json) {
     return new Food(
       name: json['product_name'] as String,

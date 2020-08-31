@@ -33,7 +33,7 @@ class recommCards extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
         ),
         elevation: 5,
-        color:Colors.green[600],
+        color:Colors.orange[800],
         child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
           ExpansionTile(
             leading: Icon(Icons.restaurant_menu, size:45.0,color: Colors.white),
@@ -47,7 +47,8 @@ class recommCards extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20,5,20,20),
                 child: Text(nutrient + value.toStringAsFixed(2), textAlign: TextAlign.center, style:TextStyle(fontSize:18, color: Colors.white))),
             children: <Widget>[
-              Text(nut_values, textAlign: TextAlign.center, style:TextStyle(fontSize:16,color: Colors.white)),
+              //Text(nut_values, textAlign: TextAlign.center, style:TextStyle(fontSize:16,color: Colors.white)),
+
             ]
             ,)]
 

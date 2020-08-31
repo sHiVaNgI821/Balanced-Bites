@@ -130,6 +130,7 @@ class _TextAppState extends State<TextApp> {
       //debugPrint(bookval["product_name"]);
     }
     allValues = foodItems;
+    allFoodItems=foodItems;
     return foodItems;
   }
 

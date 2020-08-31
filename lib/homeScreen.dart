@@ -471,7 +471,7 @@ class _MealCard extends StatelessWidget {
         elevation: 4,
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
+            //mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Flexible(
                 fit: FlexFit.tight,
@@ -497,15 +497,25 @@ class _MealCard extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
-                      if(user.nutrients.contains('Calories'))Text('Calories: ${meal.energy.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Protein'))Text('Protein: ${meal.protein.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Carbohydrates'))Text('Carbohydrates: ${meal.carbs.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Fat'))Text('Fat: ${meal.fat.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Cholestrol'))Text('Cholestrol: ${meal.cholestrol.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Fibre'))Text('Fibre: ${meal.fibre.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Sugar'))Text('Sugar: ${meal.sugar.toStringAsFixed(2)}'),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
 
-                      SizedBox(height: 16),
+                          children: [
+                            if(user.nutrients.contains('Calories'))Container(child: Text('Calories: ${meal.energy.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Protein'))Container(child: Text('Protein: ${meal.protein.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Carbohydrates'))Container(child: Text('Carbohydrates: ${meal.carbs.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Fat'))Container(child: Text('Fat: ${meal.fat.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Cholestrol'))Container(child: Text('Cholestrol: ${meal.cholestrol.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Fibre'))Container(child: Text('Fibre: ${meal.fibre.toStringAsFixed(2)}')),
+                            if(user.nutrients.contains('Sugar'))Container(child: Text('Sugar: ${meal.sugar.toStringAsFixed(2)}')),
+                            SizedBox(height: 16),
+                          ],
+                        ),
+                      ),
+
+
                     ],
                   ),
                 ),
