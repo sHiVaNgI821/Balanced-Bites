@@ -74,7 +74,7 @@ class _SpinBoxInputState extends State<SpinBoxInput> {
               SliverList(
                 delegate: SliverChildBuilderDelegate((context,index){
                   if(index>=nut_list.length)return null;
-                  return SpinBoxes(user1, nut_list[index]);
+                  return SpinBoxes(user1, nut_list[index],index);
                 }
                 ),
 

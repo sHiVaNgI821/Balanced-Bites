@@ -16,6 +16,13 @@ class _DashboardState extends State<Dashboard> {
   _DashboardState(this.user1);
   @override
   List<Slide> slides = new List();
+  @override
+  updateNutrients(){
+    setState(() {
+
+    });
+  }
+
   void initState() {
     super.initState();
     for(int i = 0; i< user1.nutrients.length; i++) {
@@ -23,24 +30,28 @@ class _DashboardState extends State<Dashboard> {
 
         Slide(
           title:
-          "${user1.nutrients[i]}\n ",
+          "${user1.nutrients[i].toUpperCase() }",
 
           styleTitle:
           TextStyle(color: Colors.white,
               fontSize: 30.0,
               fontWeight: FontWeight.bold,),
-              //fontFamily: 'RobotoMono'),
-          description:"ABC",
+              //fontFamily: 'Pacifico'),
+          /*description:"ABC",
           //"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
           styleDescription:
           TextStyle(color: Colors.white,
               fontSize: 20.0,
-              fontStyle: FontStyle.italic,),
+              fontStyle: FontStyle.italic,),*/
               //fontFamily: 'Raleway'),
           /*marginDescription: EdgeInsets.only(
               left: 20.0, right: 20.0),)*/
           centerWidget:Column(
-            children: [Center(
+            children: [
+              /*Text("${user1.nutrients[i]}\n ",style:TextStyle(color: Colors.white,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,),),*/
+              Center(
               child: Row(crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -51,18 +62,24 @@ class _DashboardState extends State<Dashboard> {
                   SizedBox(width: 20),
                   Column(
                     children: [
-                      Text("Consumed: ${user1.presentVal[i]}",style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink.shade500,),),
+                      Text("Consumed: ${user1.presentVal[i].toStringAsFixed(2)}",style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink.shade500,),),
                       SizedBox(height: 15),
-                      Text("Left: ${user1.nutrientVal[i] - user1.presentVal[i]}",style: TextStyle(fontStyle: FontStyle.italic,color: Colors.white,),),
+                      (user1.presentVal[i] > user1.nutrientVal[i])?
+                      Text("Exceeded: ${(-user1.nutrientVal[i] + user1.presentVal[i]).toStringAsFixed(2)}",
+                        style: TextStyle(fontStyle: FontStyle.italic,color: Colors.white,),)
+                      :Text("Left: ${(user1.nutrientVal[i] - user1.presentVal[i]).toStringAsFixed(2)}",
+                        style: TextStyle(fontStyle: FontStyle.italic,color: Colors.white,),),
+                      SizedBox(height: 15),
+
                     ],
                   )
                 ],
               ),
             ),
-            ],
+             ],
           ),
-          /*colorBegin: Color(0xffFFDAB9),
-          colorEnd: Color(0xff40E0D0),*/
+          colorBegin: Color(0xffFFDAB9),
+          colorEnd: Color(0xff40E0D0),
           //backgroundImage: 'images/photo_eraser.png',
           directionColorBegin: Alignment.topLeft,
           directionColorEnd: Alignment.bottomRight,
@@ -102,6 +119,7 @@ class _DashboardState extends State<Dashboard> {
         maxLineTextDescription: 3,
       ),
     );*/
+
   }
 
   /*void onDonePress() {
@@ -129,7 +147,8 @@ class _DashboardState extends State<Dashboard> {
 */
   Widget renderSkipBtn() {
     return Icon(
-      Icons.skip_next,
+      Icons.keyboard_arrow_down,
+      size: 35,
       color: Color(0xffD02090),
     );
   }
@@ -147,12 +166,12 @@ class _DashboardState extends State<Dashboard> {
         // Skip button
         renderSkipBtn: this.renderSkipBtn(),
         colorSkipBtn: Color(0x33000000),
-        highlightColorSkipBtn: Color(0xff000000),
+        //highlightColorSkipBtn: Color(0xff000000),
 
         // Next button
         renderNextBtn: this.renderNextBtn(),
         isShowDoneBtn: false,
-
+        isShowNextBtn: false,
         // Done button
         /*nameSkipBtn: "Scroll down for more info",
         renderDoneBtn: this.renderDoneBtn(),

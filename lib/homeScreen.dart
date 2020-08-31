@@ -46,17 +46,19 @@ class _homeScreenState extends State<homeScreen> {
                                 print("Tap Event");
                               },
                               text: [
-                                "Dashboard "
+                                "Balanced Bites"
                               ],
                               textStyle: TextStyle(
-                                  fontSize: 25.0,
-                                  fontFamily:'Pacifico'
+                                  fontSize: 30.0,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily:'Pacifico',
+                                color: Colors.blueGrey,
                               ),isRepeatingAnimation: false,
                               textAlign: TextAlign.start,
                               alignment: AlignmentDirectional.topStart // or Alignment.topLeft
                           ),
                         ),
-                        SizedBox(height: 10),
+                        //SizedBox(height: 10),
                         /*Row(
                           children: [
                             _RadialProgress(
@@ -105,7 +107,7 @@ class _homeScreenState extends State<homeScreen> {
           left: 0,
           right: 0,
           child: Container(
-            height: height * 0.55,
+            height: height * 0.565,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -156,6 +158,7 @@ class _homeScreenState extends State<homeScreen> {
                             width: 32,
                           ), for (int i = 0; i < foodList.length; i++)
                             _MealCard(meal: foodList[i], user: user1,),
+
                         ],
                       ),
                     ),
@@ -464,6 +467,7 @@ class _MealCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       margin: const EdgeInsets.only(right:20),
       child: Material(
@@ -497,13 +501,14 @@ class _MealCard extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
-                      if(user.nutrients.contains('Calories'))Text('Calories: ${meal.energy.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Protein'))Text('Protein: ${meal.protein.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Carbohydrates'))Text('Carbohydrates: ${meal.carbs.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Fat'))Text('Fat: ${meal.fat.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Cholestrol'))Text('Cholestrol: ${meal.cholestrol.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Fibre'))Text('Fibre: ${meal.fibre.toStringAsFixed(2)}'),
-                      if(user.nutrients.contains('Sugar'))Text('Sugar: ${meal.sugar.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('CALORIES'))
+                        Text('Calories: ${meal.energy.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('PROTEIN'))Text('Protein: ${meal.protein.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('CARBOHYDRATES'))Text('Carbs: ${meal.carbs.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('FAT'))Text('Fat: ${meal.fat.toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('CHOLESTROL'))Text('Cholestrol: ${(meal.cholestrol*1000).toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('FIBRE'))Text('Fibre: ${(meal.fibre *2).toStringAsFixed(2)}'),
+                      if(user.nutrients.contains('SUGAR'))Text('Sugar: ${meal.sugar.toStringAsFixed(2)}'),
 
                       SizedBox(height: 16),
                     ],

@@ -22,7 +22,7 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
         padding: const EdgeInsets.all(2.0),
         child: ChoiceChip(
           backgroundColor: Colors.orangeAccent,
-          selectedColor: Colors.red[700],
+          selectedColor: Colors.pink,
           label: Text(item, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
           selected: selectedChoices.contains(item),
           onSelected: (selected) {
