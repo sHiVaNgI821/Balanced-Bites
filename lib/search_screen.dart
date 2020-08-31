@@ -135,6 +135,7 @@ class _TextAppState extends State<TextApp> {
       //debugPrint(bookval["product_name"]);
     }
     allValues = foodItems;
+    allFoodItems=foodItems;
     return foodItems;
   }
 
@@ -308,7 +309,7 @@ class _TextAppState extends State<TextApp> {
                                       user.presentVal[i] += filter(enteredFood).sugar;
                                     }
                                     if (user.nutrients[i] == "FIBRE"){
-                                      user.presentVal[i] += (filter(enteredFood).fibre * 1000);
+                                      user.presentVal[i] += (filter(enteredFood).fibre);
                                     }
                                     if (user.nutrients[i] == "FAT"){
                                       user.presentVal[i] += filter(enteredFood).fat;

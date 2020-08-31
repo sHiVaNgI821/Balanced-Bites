@@ -13,6 +13,11 @@ class Food {
       this.fibre, this.cholestrol);
 }
 var foodList=[];
+
+List<Food> allFoodItems=[];
+Food filter(value) {
+  return allFoodItems.where((element) => element.name.toLowerCase().contains(value.toLowerCase()) ).toList()[0];
+}
   /*factory Food.fromJson(Map<String, dynamic> json) {
     return new Food(
       name: json['product_name'] as String,

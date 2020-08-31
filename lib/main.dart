@@ -15,7 +15,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp>{
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   User _user1 = User();
 
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-
+        debugShowCheckedModeBanner: false,
       home:Container(
         decoration: BoxDecoration(
             image: DecorationImage(
