@@ -12,7 +12,7 @@ class Food {
   Food(this.name, this.energy, this.carbs, this.sugar, this.protein, this.fat,
       this.fibre, this.cholestrol);
 }
-var foodList=[Food('hello',0.0,0.0,0.0,0.0,0.0,0.0,0.0)];
+var foodList=[];
 
 List<Food> allFoodItems=[];
 Food filter(value) {

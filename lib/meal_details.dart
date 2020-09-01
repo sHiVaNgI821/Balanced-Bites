@@ -67,13 +67,13 @@ class MealDetailScreen extends StatelessWidget {
       launch(my_url);
     }
     return Scaffold(
-          backgroundColor: const Color(0xFFE9E9E9),
+          backgroundColor: Colors.black12,
           body: CustomScrollView(
             slivers: <Widget>[
               SliverAppBar(
                 snap: true,
                 floating: true,
-                backgroundColor: const Color(0xFF200087),
+                backgroundColor: Colors.black12,
                 expandedHeight: 300,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(40))),
@@ -101,20 +101,20 @@ class MealDetailScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           if(groupNo == 0) Image.asset(
-                              'images/low cholestrol.jpg', fit: BoxFit.cover)
+                              'images/low_ch.jpg', fit: BoxFit.fitHeight)
                           else
                             if(groupNo == 1) Image.asset(
-                              'images/instant energy.jpg', fit: BoxFit.cover,)
+                              'images/instant_e.jpg', fit: BoxFit.fitHeight,)
                             else
                               if(groupNo == 2) Image.asset(
-                                'images/high fiber.jpg', fit: BoxFit.cover,)
+                                'images/high_fib.jpg', fit: BoxFit.fitHeight,)
                               else
                                 if(groupNo == 3) Image.asset(
-                                  'images/low fat.jpg', fit: BoxFit.cover,)
+                                  'images/low_f.jpg', fit: BoxFit.fitHeight,)
                                 else
                                   if(groupNo == 4) Image.asset(
                                     'images/high_protein.jpg',
-                                    fit: BoxFit.cover,)
+                                    fit: BoxFit.fitHeight,)
                         ],
                       )
 
@@ -127,12 +127,16 @@ class MealDetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      filter(meal).name.toUpperCase(),
-                      style: TextStyle(
-                        fontWeight: FontWeight.w800,
-                        fontSize: 24,
-                        color: Colors.black,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0,bottom: 10),
+                      child: Text(
+                        filter(meal).name.toUpperCase(),
+                        style: TextStyle(
+                          //fontWeight: FontWeight.w800,
+                          fontFamily:'Pacifico',
+                          fontSize: 28,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     /*ListTile(
@@ -186,12 +190,12 @@ class MealDetailScreen extends StatelessWidget {
                       height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 70),
                       child: Text(
                         "NUTRIENT COMPOSITION",
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
-                          fontSize: 16,
+                          fontSize: 20,
                           color: Colors.blueGrey,
                         ),
                       ),
@@ -202,74 +206,81 @@ class MealDetailScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
 
                           Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).protein.toStringAsFixed(2),
+                            child: Text("PROTEIN: ${
+                              filter(meal).protein.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).carbs.toStringAsFixed(2),
+                            child: Text("CARBOHYDRATES:${
+                              filter(meal).carbs.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).energy.toStringAsFixed(2),
+                            child: Text("CALORIES : ${
+                              filter(meal).energy.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).fat.toStringAsFixed(2),
+                            child: Text("FAT ${
+                              filter(meal).fat.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).fibre.toStringAsFixed(2),
+                            child: Text("FIBRE:${
+                              filter(meal).fibre.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ), Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).cholestrol.toStringAsFixed(2),
+                            child: Text("CHOLESTROL: ${
+                              filter(meal).cholestrol.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                           ), Padding(
                             padding: const EdgeInsets.only(bottom: 6),
-                            child: Text(
-                              filter(meal).sugar.toStringAsFixed(2),
+                            child: Text("SUGARS: ${
+                              filter(meal).sugar.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
+                                color: Colors.blueGrey,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -280,11 +291,14 @@ class MealDetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    RaisedButton(
-                      child: Text('View Recipe'),
-                      onPressed: (){
-                        openURL();
-                      },
+                    Padding(
+                      padding: const EdgeInsets.only(left:70.0,right:70),
+                      child: RaisedButton(
+                        child: Text('View Recipe'),
+                        onPressed: (){
+                          openURL();
+                        },
+                      ),
                     )
 
 

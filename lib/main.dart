@@ -15,7 +15,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp>{
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   User _user1 = User();
 
@@ -35,14 +36,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-
+        debugShowCheckedModeBanner: false,
       home:Container(
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/bg.jpg'), fit: BoxFit.fitHeight,colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.65), BlendMode.dstATop),)),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
+          /*appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.orangeAccent,
             title: Text('Balanced Bites',
@@ -53,7 +54,7 @@ class _MyAppState extends State<MyApp> {
               ),),
             centerTitle: true,
 
-          ),
+          ),*/
           body: SafeArea(
 
               child: Column(
@@ -63,17 +64,18 @@ class _MyAppState extends State<MyApp> {
                 children: <Widget>[
 
 
-                  CircleAvatar(
+                  /*CircleAvatar(
                     radius: 50.0,
                     backgroundImage: AssetImage('images/user.png'),
-                  ),
+                  ),*/
+
                   Text(
-                    'WELCOME !!',
+                    'Balanced Bites',
                     style: TextStyle(
                         fontSize: 35.0,
-                        color: Colors.white,
+                        color: Colors.orangeAccent,
                         fontWeight: FontWeight.bold,
-
+                        fontFamily: 'Pacifico',
                     ),
                   ),
 
@@ -90,9 +92,9 @@ class _MyAppState extends State<MyApp> {
                                 }
                                 return null;
                               },
-                              decoration: InputDecoration(
+                              decoration: InputDecoration(focusColor: Colors.orangeAccent,
                                   hintText: "Can we know your name?",
-                                  fillColor: Colors.white70,
+                                  fillColor: Colors.white54,
                                   filled: true,
                                   hintStyle: TextStyle(color: Colors.black54),
                               ),
@@ -104,41 +106,55 @@ class _MyAppState extends State<MyApp> {
                                 }
                             ),
                           ),
-                          Center(
-                            child: Text('Which of these would you like to track?',
-                              style: TextStyle(
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0, 10.0),
+                            child: Center(
+                              child: Text('Which of these would you like to track?',
+                                style: TextStyle(
 
-                                color: Colors.white,
-                                fontSize: 21.0,
-                                  fontFamily: 'Pacifico'
+                                  color: Colors.white,
+                                  fontSize: 21.0,
+                                    fontFamily: 'Pacifico'
+                                ),
                               ),
                             ),
                           ),
-                          MultiSelectChip(
-                            ["Protein", "Carbohydrates", "Calories", "Fat", "Fibre","Cholestrol", "Sugar"],
-                            onSelectionChanged: (selectedList) {
-                              setState(() {
-                                selectedReportList = selectedList;
-                              });
-                            },
-                          ),
-                          Container(
-                            child: RaisedButton(
-                              child: Text("Let's go"),
-                              onPressed: (){
-                                updateNutrient(selectedReportList);
-                                if(_formKey.currentState.validate()){
-                                  _formKey.currentState.save();
-                                }
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> Scaffold(
-                                  body: SpinBoxInput(
-                                      user1: _user1, list: selectedReportList),
-                                ),
-                                ),
-                                );
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: MultiSelectChip(
+                              ["PROTEIN", "CARBOHYDRATES", "CALORIES", "FAT", "FIBRE","CHOLESTROL", "SUGAR"],
+                              onSelectionChanged: (selectedList) {
+                                setState(() {
+                                  selectedReportList = selectedList;
+                                });
                               },
                             ),
                           ),
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top:20.0),
+
+
+                                child: RaisedButton(//iconSize: 45,
+                                  //icon: Icon(Icons.play_circle_filled,color: Colors.white,),
+
+                                  child: Text("DONE"),
+                                  onPressed: (){
+                                    updateNutrient(selectedReportList);
+                                    if(_formKey.currentState.validate()){
+                                      _formKey.currentState.save();
+                                    }
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Scaffold(
+                                      body: SpinBoxInput(
+                                          user1: _user1, list: selectedReportList),
+                                    ),
+                                    ),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+
                         ],
                   ),
                   ),

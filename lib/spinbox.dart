@@ -7,21 +7,28 @@ double last = 50;
 
 class SpinBoxes extends StatelessWidget {
   @override
-  String nutrient;
+  final index;
+  final String nutrient;
   User user1=User();
   int nutValue;
-  //if (nutrient == "carbohydartes"){}
-  //String unit = (nutrient.toUpperCase() == "CHOLESTROL" || nutrient.toUpperCase() == "FIBRE")? "mg" : "g";
-  SpinBoxes(this.user1, this.nutrient);
+  /*String unit;
+   if nutrient != "carbohydartes" {
+     unit = "mg";
+  } else {
+     unit = "g";
+  }*/
+  SpinBoxes(this.user1, this.nutrient, this.index);
+
+
   Widget build(BuildContext context) {
+    String unit = (nutrient.toUpperCase() == "CHOLESTROL" || nutrient.toUpperCase() == "FIBRE")? "mg" : "g";
     return Column(
       children: [
 
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-
-            Text(nutrient.toUpperCase()+"\n(in g) ", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+            Text(nutrient.toUpperCase()+"\n(in ${unit}) ", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
             //Text("mg", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
 
             Container(
@@ -33,6 +40,8 @@ class SpinBoxes extends StatelessWidget {
                 value: 0,
                 onChanged: (value) {
                     last = value;
+                    user1.nutrientVal[index] = value.toInt();
+                    print(user1.nutrientVal);
                 },
               ),
             ),
@@ -41,11 +50,11 @@ class SpinBoxes extends StatelessWidget {
       icon: Icon(Icons.send,size: 30,),
               //shape: Border.all(width: 2, color: Colors.blueGrey),
                 onPressed: () {
-                    if(user1.nutrientVal == null){
+                    /*if(user1.nutrientVal == null){
                       user1.nutrientVal = [last.toInt()];
                     } else {
                       user1.nutrientVal.add(last.toInt());
-                    }
+                    }*/
                     print(user1.nutrientVal);
 
                 },

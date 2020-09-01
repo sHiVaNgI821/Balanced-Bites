@@ -391,61 +391,65 @@ class Recommendations extends StatelessWidget {
           SliverAppBar(
             expandedHeight: 350,
             pinned: true,
-            backgroundColor: Colors.brown,
+            backgroundColor: Color(0xFF5B4D9D),
             flexibleSpace: FlexibleSpaceBar(
               title: Text("Recommendations",
                   style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 27,
                       fontFamily: 'Pacifico',
                       color: Colors.white),
-                  textAlign: TextAlign.left),
+                  /*textAlign: TextAlign.center*/),
               background: Image.asset(
-                'images/add_food_item.PNG',
+                'images/Recom.jpg',
                 fit: BoxFit.fitWidth,
               ),
             ),
           ),
           SliverToBoxAdapter(
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              elevation: 5,
-
-              child: ExpansionTile(
-                leading: ClipRRect(
-                  borderRadius:
-                  BorderRadius.circular(25),
-                  child: ColorFiltered(
-                    colorFilter: ColorFilter.mode(
-                        Color(0xFF5B4D9D),
-                        BlendMode.color),
-                    child: Image.asset(
-                      "images/cholestrol.png",
-                      width: 30,
-                      height: 30,
-                    ),
-                  ),
+            child: Padding(
+              padding: const EdgeInsets.only(top:20.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
                 ),
-                title: Text('Low Cholestrol'),
-                children: [
-                  for(var i = 0; i < 5; i++)
-                    Card(
-                      child: ListTile(
-                        title: Text('${recomList[i]}'),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute( builder: (context) => MealDetailScreen(meal: recomList[i],groupNo: 0,),
-                                //functionality(user1),
-                              )
+                elevation: 5,
 
-                          );
-
-                        },
+                child: ExpansionTile(
+                   //backgroundColor: Colors.blueGrey,
+                  leading: ClipRRect(
+                    borderRadius:
+                    BorderRadius.circular(25),
+                    child: ColorFiltered(
+                      colorFilter: ColorFilter.mode(
+                          Color(0xFF5B4D9D),
+                          BlendMode.color),
+                      child: Image.asset(
+                        "images/cholestrol.png",
+                        width: 40,
+                        height: 40,
                       ),
                     ),
-                ],
+                  ),
+                  title: Text('Low Cholestrol'),
+                  children: [
+                    for(var i = 0; i < 5; i++)
+                      Card(
+                        child: ListTile(
+                          title: Text('${recomList[i]}'),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute( builder: (context) => MealDetailScreen(meal: recomList[i],groupNo: 0,),
+                                  //functionality(user1),
+                                )
+
+                            );
+
+                          },
+                        ),
+                      ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -466,8 +470,8 @@ class Recommendations extends StatelessWidget {
                         BlendMode.color),
                     child: Image.asset(
                       "images/energy.png",
-                      width: 30,
-                      height: 30,
+                      width: 40,
+                      height: 40,
                     ),
                   ),
                 ),
@@ -509,8 +513,8 @@ class Recommendations extends StatelessWidget {
                         BlendMode.color),
                     child: Image.asset(
                       "images/fibres.jpg",
-                      width: 30,
-                      height: 30,
+                      width: 40,
+                      height: 40,
                     ),
                   ),
                 ),
@@ -553,8 +557,8 @@ class Recommendations extends StatelessWidget {
                         BlendMode.color),
                     child: Image.asset(
                       "images/fat.png",
-                      width: 30,
-                      height: 30,
+                      width: 40,
+                      height: 40,
                     ),
                   ),
                 ),
@@ -596,8 +600,8 @@ class Recommendations extends StatelessWidget {
                         BlendMode.color),
                     child: Image.asset(
                       "images/protein.jpeg",
-                      width: 30,
-                      height: 30,
+                      width: 40,
+                      height: 40,
                     ),
                   ),
                 ),

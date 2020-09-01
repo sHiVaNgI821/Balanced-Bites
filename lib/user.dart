@@ -1,6 +1,6 @@
 class User {
   String name;
   List <String> nutrients ;
-  List<int> nutrientVal;
-  List<int> presentVal= [10,20,30,40];
+  List<int> nutrientVal=[0,0,0,0,0,0,0];
+  List<double> presentVal= [0,0,0,0,0,0,0];
 }

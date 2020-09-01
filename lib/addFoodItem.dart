@@ -24,7 +24,7 @@ class LandingScreen extends StatefulWidget {
 class _LandingScreenState extends State<LandingScreen> {
   File _image;
   String food;
-  String output='apple pie';
+  String output;
   //final String urlAPI = 'http://127.0.0.1:5000/uploader';
 
   _pickImage() async {
@@ -78,11 +78,11 @@ class _LandingScreenState extends State<LandingScreen> {
   }
 
 
-
+  var show =false;
   @override
   Widget build(BuildContext context) {
+
     var str='Predict';
-    String output;
     //var temp= _uploadImage();
     Text ShowMessage(){
       setState(() {
@@ -128,6 +128,12 @@ class _LandingScreenState extends State<LandingScreen> {
                           )),
                           height: 200)
                       : Image.file(File(_image.path), height: 350),
+                  (show)? Column(
+                    children: [
+                      SizedBox(height: 10,),
+                      Text(output.toUpperCase(),style: TextStyle(color: Colors.brown,fontSize: 20),),
+                    ],
+                  ): Text(""),
                   SizedBox(
                     height: 15,
                   ),
@@ -138,7 +144,7 @@ class _LandingScreenState extends State<LandingScreen> {
                         onPressed: _clickImage,
                         color: Colors.brown,
                         child: Text(
-                          'Click a picture',
+                          'CAMERA',
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ),
@@ -148,42 +154,33 @@ class _LandingScreenState extends State<LandingScreen> {
                       RaisedButton(
                         onPressed: _pickImage,
                         color: Colors.brown,
-                        child: Text('Pick from gallery',
+                        child: Text('GALLERY',
                             style:
                                 TextStyle(fontSize: 18, color: Colors.white)),
                       ),
                     ],
                   ),
+                  SizedBox(height:20),
                   RaisedButton(
-                    child: Text('Add'),
-                    onPressed: (){
-                      if(foodList[0]==Food('hello',0.0,0.0,0.0,0.0,0.0,0.0,0.0))foodList[0]=filter(output);
-                      else foodList.add(filter(output));
-                      print(foodList);
-                    },
-                  ),
-
-                  RaisedButton(
-                    color: Colors.brown,
-                    child: Text(str),
+                    color: Colors.grey,
+                    child: Text("PREDICT",style: TextStyle(color:Colors.white,)),
                     onPressed: () async {
                       return
-                      FutureBuilder(
-                        future: _uploadImage(),
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            return SnackBar(
-                              content: Text('done'),
-                            );
-                            /*Container(color: Colors.black,
+                        FutureBuilder(
+                          future: _uploadImage(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData) {
+                              print("SS:${snapshot.data}");
+                              return Align( alignment: FractionalOffset.topCenter,child: Text("${output}",style:TextStyle(color:Colors.red)));
+                              /*Container(color: Colors.black,
                                 height: 500,
                                 child: Text('${snapshot.data}'));*/
-                          } else if (snapshot.hasError) {
-                            return new Text("${snapshot.error}");
-                          }
-                          return Text('hi there');
-                        },
-                      );
+                            } else if (snapshot.hasError) {
+                              return new Text("${snapshot.error}");
+                            }
+                            return Text('hi there');
+                          },
+                        );
                       /*var temp = await _uploadImage();
                       setState(() {
                         food = temp;
@@ -191,6 +188,25 @@ class _LandingScreenState extends State<LandingScreen> {
                       });*/
                     },
                   ),
+                  RaisedButton(
+                      color: Colors.grey,
+                    child: Text('ADD',style: TextStyle(color:Colors.white,)),
+                    onPressed: (){
+                      setState(() {
+                        show = true;
+                      });
+
+                      if (output != null){
+                      if(foodList.isEmpty){
+                        foodList[0]=filter(output);
+                      }
+                      else foodList.add(filter(output));
+                      //print("FOOD LIST:${foodList[3].name}");
+                    }
+                    }
+                  ),
+
+
                   /*Container(
                     child: Text('Prediction: ${food.toString()}'),
                   )*/

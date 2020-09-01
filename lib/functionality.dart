@@ -59,7 +59,7 @@ class _functionalityState extends State<functionality>
   Widget build(BuildContext context) {
     final _pageList = [
       LandingScreen(),
-      TextApp(),
+      TextApp(user1),
       homeScreen(user1: user1),
     ];
     return Scaffold(
