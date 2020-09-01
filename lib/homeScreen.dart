@@ -473,12 +473,22 @@ class _MealCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             //mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Flexible(
-                fit: FlexFit.tight,
+              SingleChildScrollView(
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
-                  child: Image.asset('images/pizza.jpg',
-                      width: 150, fit: BoxFit.fitWidth),
+                  child: Column(
+                    children: [
+                      if(meal.name.toLowerCase()=='samosa')Image.asset('images/samosa.jpg',
+                          width: 150, fit: BoxFit.fitWidth)
+                      else if(meal.name.toLowerCase()=='sushi')Image.asset('images/sushi.jpg',
+                  width: 150, fit: BoxFit.fitWidth)
+                      else if(meal.name.toLowerCase()=='donuts')Image.asset('images/donut.jpg',
+                            width: 150, fit: BoxFit.fitWidth)
+                      else if(meal.name.toLowerCase()=='pizza')Image.asset('images/pizza.jpg',
+                              width: 150, fit: BoxFit.cover),
+                    ],
+                  ),
+
                 ),
               ),
               Flexible(
