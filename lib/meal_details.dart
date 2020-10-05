@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'meal_class.dart';
 import 'package:balancedbites/model.dart';
@@ -67,14 +68,14 @@ class MealDetailScreen extends StatelessWidget {
       launch(my_url);
     }
     return Scaffold(
-          backgroundColor: Colors.black12,
+          backgroundColor: Colors.blueGrey[100],
           body: CustomScrollView(
             slivers: <Widget>[
               SliverAppBar(
                 snap: true,
                 floating: true,
                 backgroundColor: Colors.black12,
-                expandedHeight: 300,
+                expandedHeight: 320,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(40))),
                 flexibleSpace: FlexibleSpaceBar(
@@ -104,7 +105,7 @@ class MealDetailScreen extends StatelessWidget {
                               'images/low_ch.jpg', fit: BoxFit.fitHeight)
                           else
                             if(groupNo == 1) Image.asset(
-                              'images/instant_e.jpg', fit: BoxFit.fitHeight,)
+                              'images/instant_e.jpg', fit: BoxFit.cover,)
                             else
                               if(groupNo == 2) Image.asset(
                                 'images/high_fib.jpg', fit: BoxFit.fitHeight,)
@@ -127,15 +128,17 @@ class MealDetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20.0,bottom: 10),
-                      child: Text(
-                        filter(meal).name.toUpperCase(),
-                        style: TextStyle(
-                          //fontWeight: FontWeight.w800,
-                          fontFamily:'Pacifico',
-                          fontSize: 28,
-                          color: Colors.white,
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0,bottom: 10),
+                        child: Text(
+                          filter(meal).name.toUpperCase(),
+                          style: TextStyle(
+                            //fontWeight: FontWeight.w800,
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blueGrey[700],
+                          ),
                         ),
                       ),
                     ),
@@ -196,7 +199,7 @@ class MealDetailScreen extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 20,
-                          color: Colors.blueGrey,
+                          color: Colors.blueGrey[700],
                         ),
                       ),
                     ),
@@ -216,7 +219,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).protein.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -227,7 +230,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).carbs.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -238,7 +241,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).energy.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -249,7 +252,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).fat.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -260,7 +263,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).fibre.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -270,7 +273,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).cholestrol.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -280,7 +283,7 @@ class MealDetailScreen extends StatelessWidget {
                               filter(meal).sugar.toStringAsFixed(2)}",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.blueGrey,
+                                color: Colors.blueGrey[600],
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -293,15 +296,17 @@ class MealDetailScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left:70.0,right:70),
-                      child: RaisedButton(
-                        child: Text('View Recipe'),
-                        onPressed: (){
-                          openURL();
-                        },
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                        child: RaisedButton(
+                          child: Text('View Recipe',style: TextStyle(fontSize: 20, color: Colors.white),),
+                          color: Colors.blueGrey[800],
+                          onPressed: (){
+                            openURL();
+                          },
+                        ),
                       ),
                     )
-
-
                   ],
                 ),
               ),

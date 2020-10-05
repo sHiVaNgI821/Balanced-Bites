@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:balancedbites/model.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:dio/dio.dart';
@@ -56,7 +57,7 @@ class _LandingScreenState extends State<LandingScreen> {
             filename: filename, contentType: new MediaType('image', 'jpg')),
 
       });
-     var response = await dio.post('http://lnd.talentsprint.com:5002/uploader',
+     var response = await dio.post('http://portfolios.talentsprint.com:5002/uploader',
           data: formdata,
           options: Options(
 //            headers: {
@@ -114,7 +115,8 @@ class _LandingScreenState extends State<LandingScreen> {
           SliverToBoxAdapter(
             child: Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     height: 10,
@@ -126,7 +128,7 @@ class _LandingScreenState extends State<LandingScreen> {
                             'Choose some image',
                             style: TextStyle(fontSize: 28),
                           )),
-                          height: 200)
+                          height: 180)
                       : Image.file(File(_image.path), height: 350),
                   (show)? Column(
                     children: [
@@ -161,49 +163,66 @@ class _LandingScreenState extends State<LandingScreen> {
                     ],
                   ),
                   SizedBox(height:20),
-                  RaisedButton(
-                    color: Colors.grey,
-                    child: Text("PREDICT",style: TextStyle(color:Colors.white,)),
-                    onPressed: () async {
-                      return
-                        FutureBuilder(
-                          future: _uploadImage(),
-                          builder: (context, snapshot) {
-                            if (snapshot.hasData) {
-                              print("SS:${snapshot.data}");
-                              return Align( alignment: FractionalOffset.topCenter,child: Text("${output}",style:TextStyle(color:Colors.red)));
-                              /*Container(color: Colors.black,
-                                height: 500,
-                                child: Text('${snapshot.data}'));*/
-                            } else if (snapshot.hasError) {
-                              return new Text("${snapshot.error}");
-                            }
-                            return Text('hi there');
-                          },
-                        );
-                      /*var temp = await _uploadImage();
-                      setState(() {
-                        food = temp;
-                        print(food);
-                      });*/
-                    },
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      RaisedButton(
+                        color: Colors.grey,
+                        child: Text("UPLOAD",style: TextStyle(color:Colors.white,)),
+                        onPressed: () async {
+
+                          return Column(
+                            children: [
+                              FutureBuilder(
+                                  future: _uploadImage(),
+                                  builder: (context, snapshot) {
+                                    if (snapshot.hasData) {
+                                      print("SS:");
+                                      return Align( alignment: FractionalOffset.topCenter,child: Text("${output}",style:TextStyle(color:Colors.red)));
+                                      /*Container(color: Colors.black,
+                                        height: 500,
+                                        child: Text('${snapshot.data}'));*/
+                                    } else if (snapshot.hasError) {
+                                      return new Text("${snapshot.error}");
+                                    }
+                                    return Text('hi there');
+                                  },
+                                ),
+                              Text("${output}"),
+                            ],
+                          );
+                          /*var temp = await _uploadImage();
+                          setState(() {
+                            food = temp;
+                            print(food);
+                          });*/
+                        },
+                      ),
+                      SizedBox(width:20),
+                      RaisedButton(
+                          color: Colors.grey,
+                          child: Text('PREDICT',style: TextStyle(color:Colors.white,)),
+                          onPressed: (){
+                            setState(() {
+                              show = true;
+                            });}
+                      ),
+                    ],
                   ),
+
                   RaisedButton(
                       color: Colors.grey,
-                    child: Text('ADD',style: TextStyle(color:Colors.white,)),
-                    onPressed: (){
-                      setState(() {
-                        show = true;
-                      });
-
-                      if (output != null){
-                      if(foodList.isEmpty){
-                        foodList[0]=filter(output);
+                      child: Text('ADD TO THE LIST',style: TextStyle(color:Colors.white,)),
+                      onPressed: (){
+                        if (output != null){
+                          if(foodList.isEmpty){
+                            foodList[0]=filter(output);
+                          }
+                          else foodList.add(filter(output));
+                          //print("FOOD LIST:${foodList[3].name}");
+                        }
                       }
-                      else foodList.add(filter(output));
-                      //print("FOOD LIST:${foodList[3].name}");
-                    }
-                    }
                   ),
 
 

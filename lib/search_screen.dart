@@ -342,17 +342,7 @@ class _TextAppState extends State<TextApp> {
                     ),
                   ],),
               );
-              /*Container(
-                padding: new EdgeInsets.all(20.0),
-                child: new Row(
-                  children: <Widget>[
 
-                    Text(
-
-                        "Hi ${filter(enteredFood).name} and lenght ")
-                  //"hello ${snapshot.data[0]}"
-                  ],
-                ));*/
             } else if (snapshot.hasError) {
               return new Text("${snapshot.error}");
             }
@@ -363,11 +353,6 @@ class _TextAppState extends State<TextApp> {
               );
           },
         )
-
-
-
-
-
     );
   }
 
